@@ -1,0 +1,44 @@
+h1{
+    color: white;
+    font-family: 'William',serif;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 45px;
+    font-style: normal;
+  }
+  h2{
+    color: white;
+    font-family: 'Inter',sans-serif;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+  h3{
+    color: white;
+    font-family: 'Inter',sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 18px;
+    font-style: normal;
+    margin: 0;
+  }
+  p{
+    color: black;
+    font-family: 'Inter',sans-serif;
+    margin: 0;
+    text-align: center;
+  }
+  body{
+    min-width: 850px;
+    background-color: rgb(137, 218, 222);
+  }
+ img{
+    width: 210px;
+    margin-bottom: 80px;
+ }
+ div{
+    background-color: deepskyblue;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin: 0 auto 20px;
+ }  
