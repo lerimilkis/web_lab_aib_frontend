@@ -1,0 +1,180 @@
+html {
+  height: 100%;
+}
+
+body {
+background-color: rgb(236, 205, 161);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 0;
+}
+
+header {
+background-color: white;
+padding: 30px;
+margin: auto;
+text-align: center;
+justify-content: space-between;
+position: sticky;
+top: 20;
+left: 0;
+margin: 1em 0;
+}
+
+img{
+width: 100px;
+height: auto;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+nav a {
+color: #333;
+font-size: 20px;
+font-weight: bold;
+text-decoration: none;
+margin-left: 40px;
+padding: 10px;
+}
+
+a:hover{
+color: rgb(187, 111, 28);
+}
+
+main {
+max-width: 1440px;
+margin: 20px auto;
+padding: 0 40px;
+}
+
+p{
+font-size: 22px;
+}
+
+h1 {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+font-size: 36px;
+margin-top: 50px;
+margin-bottom: 25px;
+}
+
+.title{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+font-size: 32px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.main-catalog, .promo-catalog {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 40px;
+margin: 12px;
+}
+
+.logo {
+margin: 12px;
+}
+
+.item {
+flex-grow: 1;
+flex-basis: calc(33.33% - 24px);
+margin-bottom: 40px;
+}
+
+.item-image {
+width: 85%;
+max-width: 350px;
+height: auto;
+transition: 0.2s;
+}
+
+.promo-catalog h2 {
+clear: both;
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.promo-catalog .item {
+flex-basis: calc(25% - 20px);
+margin-right: 20px;
+margin-bottom: 20px;
+}
+
+.item-image:hover {
+transform: scale(1.25);
+opacity: 1.0;
+}
+
+/* Styles for desktop version (640px) */
+@media (min-width: 640px) {
+.promo-catalog .item {
+    width: calc(33.3% - 8px);
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+.item-image {
+  max-width: 200px;
+}
+}
+
+/* Styles for tablet version (414px) */
+@media (min-width: 414px) {
+.promo-catalog .item {
+    width: calc(50% - 6px);
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+.item-image {
+  max-width: 150px;
+}
+}
+
+/* Styles for tablet version (320px) */
+@media (min-width: 320px) {
+.promo-catalog .item {
+    width: calc(100% -4px);
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+.item-image {
+  max-width: 150px;
+}
+}
+
+@media screen and (min-width: 960px) {
+.item-image {
+  max-width: 300px;
+}
+}
+
+@media screen and (min-width: 1280px) {
+/* Увеличение отступов контента от краёв вкладки браузера */
+body {
+  margin: 40px;
+}
+.item-image {
+  max-width: 350px;
+}
+
+/* Увеличение размера заголовков и вертикальных отступов */
+h1, h2, h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Расположение по 3 карточки товара в строку внутри блока main-catalog */
+.main-catalog .item {
+  width: calc(33.33% - 24px);
+  margin-right: 24px;
+}
+
+/* Расположение по 4 карточки товара в строку внутри блока promo-catalog */
+.promo-catalog .item {
+  width: calc(25% - 20px);
+  margin-right: 20px;
+}
+}
