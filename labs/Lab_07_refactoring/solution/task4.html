@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+    const klassSoStudentami = [
+  { FIO: 'Петров А.А.', Ocenka: 5 },
+  { FIO: 'Иванов Б.Б.', Ocenka: 3.4 },
+  { FIO: 'Сидоров Г.Г.', Ocenka: 9 },
+  { FIO: 'Немолодой Д.Д', Ocenka: 2 },
+  { FIO: 'Молодой Е.Е', Ocenka: 3.4 }
+];
+
+let srednee = 0;
+let kolichestvo = 0;
+let ploxieStudenti = [];
+
+for (let i=0; i < klassSoStudentami.length; i++)
+{
+    if (klassSoStudentami[i].Ocenka>5) console.log('Это значение учитываться не будет оно не соответствует допустимым значениям');
+    if (klassSoStudentami[i].Ocenka<0) console.log('Это значение учитываться не будет оно не соответствует допустимым значениям');
+    if (!(klassSoStudentami[i].Ocenka <=5 && klassSoStudentami[i].Ocenka >= 0)) continue;
+    if (klassSoStudentami[i].Ocenka<4) {    
+        ploxieStudenti.push(klassSoStudentami[i])
+        srednee = srednee + klassSoStudentami[i].Ocenka;
+        kolichestvo = kolichestvo + 1;
+    }
+}
+srednee = srednee/kolichestvo;
+console.log('Средняя оценка: '+ srednee);
+
+console.log('Плохие студенты:');
+if(  ploxieStudenti.length === 0 ) console.log('Таких нет');
+ploxieStudenti.forEach((znachenie)=>{console.log('Фио: '+znachenie.FIO+'; Оценка: '+znachenie.Ocenka)});
+
+</script>
+</body>
+</html>
